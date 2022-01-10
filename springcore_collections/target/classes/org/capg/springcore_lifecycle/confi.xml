@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/bcontext"
+ xmlns:p="https://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+<!--<bean class="org.capg.springcore_lifecycle.Samosa" name="samosa"
+ init-method="init" destroy-method="destroy">
+ <property name="price" value="28" />
+ </bean>
+ 
+ <bean class="org.capg.springcore_lifecycle.Pepsi" name="pepsi"
+ init-method="init" destroy-method="destroy">
+ <property name="price" value="12" />
+ </bean> -->
+ 
+<!-- <context:annotation-config /> -->
+<bean class="org.capg.springcore_lifecycle.Example" name="example"
+ init-method="start" destroy-method="end">
+ <property name="subject" value="JavaSpring" />
+ </bean >
+ <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor">
+ 
+ </bean>
+
+</beans>
