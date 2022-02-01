@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logicalOperators</title>
+</head>
+<body>
+    <h2>Logical Operators</h2>
+
+<p>The AND operator (&&) </p>
+<p id="And"></p>
+
+<p>The OR operator (||)</p>
+<p id="Or"></p>
+
+<p>The NOT operator (!)</p>
+<p id="Not"></p>
+
+<script>
+// And Operator
+let a = 6;
+let b = 3;
+document.getElementById("And").innerHTML = 
+(a < 10 && b > 1) + "<br>" + 
+(a < 10 && b < 1);
+
+//Or Operator
+let c = 6;
+let d = 3;
+document.getElementById("Or").innerHTML = 
+(c == 5 || d == 5) + "<br>" + 
+(c == 6 || d == 0) + "<br>" + 
+(c == 0 || d == 3) + "<br>" + 
+(c == 6 || d == 3);
+
+// Not operator
+let e = 6;
+let f = 3;
+document.getElementById("Not").innerHTML = 
+!(e === f) + "<br>" + 
+!(e > f);
+</script>
+</body>
+</html>
