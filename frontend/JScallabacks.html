@@ -1,0 +1,68 @@
+/*  A callback is a function passed as an argument to another function
+This tecnique allows a function to call another function 
+A callback functioncan run after another function has finished */
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Callabacks</title>
+    </head>
+    <body>
+        <h2 style="text-align: center;">JavaScript Callabacks</h2>
+        <h2 id="first"></h2>
+        <h2 id="second"></h2>
+        <h2 id="third"></h2>
+        <h2 id="fourth"></h2>
+        <h2 id="some"></h2>
+        <script>
+            //General function implementation
+            function first(something){
+               
+                document.getElementById("first").innerHTML=something //Welcome
+            }
+            function second(anything){
+                first("Welcome")
+                document.getElementById("second").innerHTML=anything
+            }
+            function third(fewthing){
+                second("To")
+                document.getElementById("third").innerHTML=fewthing
+            }
+            function fourth(whatever){
+                
+                document.getElementById("fourth").innerHTML=whatever
+            }
+            //Invoke the function
+            first('Let');
+            second('Me');
+            third('Try');
+        </script>
+        
+        <script>
+            function display_one(value){
+                document.getElementById("some").innerHTML=value;
+            }
+            function display_two(){
+                display_one("Welcome to")
+            }
+            function display_three(){
+                display_one("The callbacks")
+            }
+            display_two();
+            display_three();
+        </script>
+
+        <script>
+            function fun(some){
+                document.getElementById("some").innerHTML=some;
+                document.write("This is 'fun'" )
+            }
+            function func(number_one,number_two){
+                var prod = number_one*number_two;
+                return prod;
+            }
+            let result = func(10,20)
+            fun(result);
+        </script>
+    </body>
+</html>

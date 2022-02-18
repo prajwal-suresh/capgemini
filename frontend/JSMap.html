@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Map</title>
+        <style>
+            h2{
+                background-color: lightgreen;
+                color: brown;
+                text-align: center;
+                width: 250px;
+                padding: 20px;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="demo"></h2>
+        <script>
+            //create a Map
+            let map_intro = new Map()
+            console.log(map_intro)
+            // insert key-value pair
+            // let info = {}
+            map_intro.set('info',{ 
+                name:'Madhu', 
+                age:23, 
+                company:'Capgemini'
+            })
+            //Access the elements
+            console.log(map_intro.get('info'));
+        </script>
+
+        <script>
+            //check Map Elements
+            let  map = new Map()
+            // I will JS object
+            let object = {}
+            map.set(object,{
+                id:101,
+                firstname:'Virat',
+                lastname:'Kohli',
+                org:'Acceture',
+                location:'Bengaluru'
+            })
+            console.log(map)
+            console.log(map.has(object));
+            console.log(map.has(map));
+        </script>
+
+        <script>
+            //Removing the elements
+            //Creating a new map to check on clear() and delete()
+            let cricket = new Map()
+            let players={}
+            cricket.set(players,{
+                jerseyno:10,
+                firstname:'Sachin',
+                lastname:'Tendulkar',
+                debut:'1989',
+                ODIcenturies:49,
+                Testcenturies:51,
+                locality:'Mumbai'
+            })
+            console.log(cricket);
+            //Delete any elements from the map
+            //delete() --> method returns true if a specified key/value pair exists and has been
+            //removed or else returns false.
+            console.log(cricket.delete('Bengaluru'))
+           // console.log(cricket)
+            console.log(cricket.delete('player'))
+           // console.log(cricket)
+        </script>
+
+        <script>
+            let cric = new Map()
+            cric.set('data',{
+                jerseyno:10,
+                firstname:'Sachin',
+                lastname:'Tendulkar',
+                debut:'1989',
+                ODIcenturies:49,
+                Testcenturies:51,
+                locality:'Mumbai'
+            })
+            console.log(cric);
+            //Delete any elements from the map
+            //delete() --> method returns true if a specified key/value pair exists and has been
+            //removed or else returns false.
+            console.log(cric.delete('bengaluru'))
+            //console.log(cric.delete(data))
+            console.log(cric.delete('data'))
+        </script>
+
+        <script>
+            //Iteration over map and through the map
+            let employee = new Map();
+            //set the map with values
+            employee.set('id',101)
+            employee.set('name','Lord Krishna')
+            employee.set('org','Wipro')
+            employee.set('salary',1000)
+            
+            //How to apply the loop
+            for(let[key,value] of employee){
+                console.log(`${key}-${value}`)                
+            }
+        </script>
+
+        <script>
+            console.log("======================================")
+            //Iterate over the maps
+            let employee_key = new Map();
+            //set the map with values
+            employee_key.set('id',101)
+            employee_key.set('name','Lord Krishna')
+            employee_key.set('org','Wipro')
+            employee_key.set('salary',1000)
+            
+            //How to apply the loop
+            for(let key of employee_key.keys()){
+                console.log(`${key}`)                
+            }
+        </script>
+
+        <script>
+            console.log("======================================")
+            //Iterate over the maps
+            let employee_val = new Map();
+            //set the map with values
+            employee_val.set('id',101)
+            employee_val.set('name','Lord Krishna')
+            employee_val.set('org','Wipro')
+            employee_val.set('salary',1000)
+            
+            //How to apply the loop
+            for(let value of employee_val.values()){
+                console.log(`${value}`)                
+            }
+        </script>
+
+        <script>
+            const cricket_info = new Map(
+                [
+                    ['Jerseyno',10],
+                    ['Firstname','Sachin'],
+                    ['Lastname','Tendulkar'],
+                    ['Debut','1989'],
+                    ['ODIcenturies',49],
+                    ['Testcenturies',51],
+                    ['Locality','Mumbai']
+                ]
+            )  
+            let display="";
+            cricket_info.forEach(function(key,value){
+                display += value + ' : ' + key + "<br>"
+            });         
+            document.getElementById("demo").innerHTML=display
+        </script>
+    </body>
+</html>

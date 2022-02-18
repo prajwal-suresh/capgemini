@@ -1,0 +1,40 @@
+//Essential set methods
+/* 1. new Set() : Creates a new Set
+   2. add() : Adds a new element to a Set
+   3. delete() : Removes an element from a set
+   4. has() : Returns true if a value exists in the set
+   5. forEach() : Invokes a callback method for each element in the set
+   6. values() : Returns an iterator with all the values in a Set
+   //Properties
+   1. size() : Returns the number of elements in a set
+   */
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h2 style="text-align: center;">JavaScript Sets</h2>
+        <h2 style="text-align: center;" id="set"></h2>
+        <h3 id="for"></h3>
+        <script>
+            //creating a set
+            const letters = new Set()
+              // [] == Arrays
+              // {} == objects
+              // add elements to the set
+            letters.add("A")
+            letters.add("B")
+            letters.add("C")
+            letters.add("D")
+            //Display the size of a set
+            document.getElementById("set").innerHTML=letters.size;
+            //List the elements
+            let letter="";
+            letters.forEach(function(value){
+                letter += value + "<br>"
+            })
+            document.getElementById("for").innerHTML=letter;
+        </script>
+    </body>
+</html>

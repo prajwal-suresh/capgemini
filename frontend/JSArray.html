@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays in JavaScript</title>
+    </head>
+    <body>
+        <p id="arr"></p>
+        <p id="arra"></p>
+        <p id="array"></p>
+        <h3 id="lang"></h3>
+        <h4 id="object"></h4>
+        <script>
+            const employee=[
+                102,
+                'Madhu',
+                'Pavan',
+                'Bengaluru'
+            ]
+            document.getElementById("arr").innerHTML=employee;
+
+            const employ=[
+                103,
+                'Naga',
+                'Venkata',
+                'Hyderabad'
+            ]
+            document.getElementById("arra").innerHTML=employ;
+
+            const employe=[] //Empty array
+                employe[0]=104,
+                employe[1]='Virat',
+                employe[2]='Kohli',
+                employe[3]='Karnool'
+            document.getElementById("array").innerHTML=employe;
+            console.log(employe[0]);
+            console.log(employe[1]);
+            console.log(employe[2]);
+            console.log(employe[3]);
+        </script>
+
+        <script>
+            //we can also create an array using new keyword
+            const language=new Array('Kannada','English','Marathi','Hindi','Odiya','Telugu')
+            document.getElementById("lang").innerHTML=language;
+        </script>
+
+        <script>
+            //By default the javascript objects are also the arrays
+            const person={
+                firstname:'Rohith',
+                lastname:'Sharma',
+                city:'california',
+                pin:65423,
+                apartment:34
+            }
+            document.getElementById("object").innerHTML=person.firstname;
+        </script>
+    </body>
+</html>

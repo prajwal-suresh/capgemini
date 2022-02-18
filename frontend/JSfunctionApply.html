@@ -1,0 +1,42 @@
+/* apply() //Method reuse
+with the apply() method, you can write a method that can be used on different objects.
+*/
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>apply()</title>
+    </head>
+    <body>
+        <h2 id="demo"></h2>
+        <h2 id="example"></h2>
+        <script>
+            const employee={
+                fullname:function(){
+                    return (this.firstname + " " + this.lastname)
+                }
+            }
+            //we need to an object to pass the value - argument to the this function
+            const object = {
+                firstname:"Madhu",
+                lastname:"Pavan"
+            }
+            document.getElementById("demo").innerHTML=employee.fullname.apply(object);
+        </script>
+
+        <script>
+            //bind() : An object can borrow a method from another object
+            const employe={
+                fullname:function(){
+                    return (this.firstname + " " + this.lastname)
+                }
+            }
+            //we need to an object to pass the value - argument to the this function
+            const member = {
+                firstname:"Capgemini",
+                lastname:"Technologies"
+            }
+            let fullname = employee.fullname.bind(member)
+            document.getElementById("example").innerHTML=fullname();
+        </script>
+    </body>
+</html>
